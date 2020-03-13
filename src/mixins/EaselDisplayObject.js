@@ -127,7 +127,6 @@ export default {
             }
         },
         updateMouseEnabled() {
-            this.component.mouseEnabled = isNaN(this.mouseEnabled) || this.mouseEnabled === false ? true : this.mouseEnabled;
             if (this.mouseEnabled) {
                 this.component.mouseEnabled = true;
             } else {
