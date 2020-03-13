@@ -54,6 +54,7 @@ export default function (implementor, extra_attributes = '', provide = {}) {
                             :align="[hAlign, vAlign]"
                             :cursor="cursor"
                             :visible="visible"
+                            :mouseEnabled="mouseEnabled"
                             :name="name"
                             ${extra_attributes}
                         >
@@ -80,6 +81,7 @@ export default function (implementor, extra_attributes = '', provide = {}) {
                         vAlign: 'top',
                         cursor: null,
                         visible: null,
+                        mouseEnabled: null,
                         name: null,
                     };
                 },
@@ -296,6 +298,7 @@ export default function (implementor, extra_attributes = '', provide = {}) {
             cursor: 'pointer',
             rotation: 15,
             visible: false,
+            mouseEnabled: false,
             name: 'Charles Wallace',
         };
 
