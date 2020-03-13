@@ -11,7 +11,7 @@
 import EaselEventBinder from '../libs/easel-event-binder.js';
 import easeljs from '../../easeljs/easel.js';
 
-const passthroughProps = ['rotation', 'cursor', 'visible', 'name'];
+const passthroughProps = ['rotation', 'cursor', 'visible', 'mouseEnabled', 'name'];
 
 export default {
     inject: ['easelParent', 'easelCanvas'],
@@ -25,6 +25,9 @@ export default {
         shadow: {},
         cursor: {},
         visible: {
+            default: true,
+        },
+        mouseEnabled: {
             default: true,
         },
         name: {},
