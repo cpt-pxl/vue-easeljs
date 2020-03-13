@@ -84,6 +84,11 @@ export default {
                 this.updateShadow();
             }
         });
+        this.$watch('mouseEnabled', () => {
+            if (this.component) {
+                this.updateMouseEnabled();
+            }
+        });
     },
     destroyed() {
         this.displayObjectBreakdown();
@@ -120,6 +125,9 @@ export default {
             } else {
                 this.component.shadow = null;
             }
+        },
+        updateMouseEnabled() {
+            this.component.mouseEnabled = isNaN(this.mouseEnabled) || this.mouseEnabled === false ? true : this.mouseEnabled;
         },
     },
 };
